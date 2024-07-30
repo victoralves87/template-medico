@@ -301,9 +301,9 @@ button:focus {
 .home_banner_area {
   position: relative;
   z-index: 1;
-  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -moz-linear-gradient(0deg, #08989e 0%, #08989e 100%);
+  background-image: -webkit-linear-gradient(0deg, #08989e 0%, #08989e 100%);
+  background-image: -ms-linear-gradient(0deg, #08989e 0%, #08989e 100%);
   margin-bottom: 200px; }
   .home_banner_area .box_1620 {
     min-height: 700px;
@@ -2551,8 +2551,8 @@ h6 {
 /* My Tabs Area css
 ============================================================================================ */
 .mytabs_area {
-  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -moz-linear-gradient(0deg, #08989e 0%, #08989e 100%);
+  background-image: -webkit-linear-gradient(0deg, #08989e 0%, #08989e 100%);
   background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%); }
 
 .tabs_inner .nav.nav-tabs {
@@ -2662,11 +2662,12 @@ h6 {
   margin-bottom: 30px; }
   .feature_item i {
     margin-bottom: 35px;
-    display: block; }
+    display: block;
+   }
     .feature_item i:before {
       margin-left: 0px;
       font-size: 60px;
-      color: #e1e1e1;
+      color: #08989e;
       line-height: 60px; }
   .feature_item h4 {
     color: #222222;
@@ -2684,10 +2685,10 @@ h6 {
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
     border-color: #fff;
     background: #fff; }
-    .feature_item:hover i:before {
+    /* .feature_item:hover i:before {
       background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent; } */
 
 /* End Feature Area css
 ============================================================================================ */
