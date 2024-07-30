@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "template-med/index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "template-med/$1"
+      }
+    ]
+  }
+  
