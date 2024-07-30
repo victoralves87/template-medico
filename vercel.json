@@ -1,14 +1,9 @@
 {
-    "builds": [
-      {
-        "src": "template-med/index.html",
-        "use": "@vercel/static"
-      }
-    ],
+    "public": "template-med",
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "template-med/$1"
+        "dest": "/template-med/$1"
       }
     ]
   }
