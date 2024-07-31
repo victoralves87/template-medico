@@ -440,7 +440,7 @@
 											<p>Send us your query anytime!</p>
 										</div>
 									</div>
-									<form class="contact_form" action="#" method="post" id="contactForm" novalidate="novalidate">
+									<form class="contact_form" id="contactForm" novalidate="novalidate" >
 										<div class="form-group">
 											<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
 										</div>
@@ -493,65 +493,85 @@
         <footer class="footer_area p_120">
 			<div class="container">
 				<div class="row footer_inner">
-					<div class="col-lg-5 col-sm-6">
+					<!-- Informações de Contato -->
+					<div class="col-lg-4 col-sm-6">
 						<aside class="f_widget ab_widget">
 							<div class="f_title">
-								<h3>About Me</h3>
+								<h3>Informações de Contato</h3>
 							</div>
-							<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
-							<p>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with 
-								<i class="fa fa-heart-o" aria-hidden="true"></i> by 
-								<a href="https://colorlib.com" target="_blank">Colorlib</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							</p>
+							<ul style="list-style-type: none; padding: 0;">
+								<li style="color: #fff;">Endereço: Rua Fulano da Silva, 108 B</li>
+								<li style="color: #fff;">Contato: (81) 99999-9999</li>
+								<li style="color: #fff;">Email: Fulano12@gmail.com</li>
+							</ul>
 						</aside>
 					</div>
-					<div class="col-lg-5 col-sm-6">
+		
+					<!-- Links Úteis -->
+					<div class="col-lg-4 col-sm-6">
 						<aside class="f_widget news_widget">
 							<div class="f_title">
-								<h3>Newsletter</h3>
+								<h3>Links Úteis</h3>
 							</div>
-							<p>Stay updated with our latest trends</p>
-							<div id="mc_embed_signup">
-								<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-									<div class="input-group d-flex flex-row">
-										<input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required type="email">
-										<button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
-									</div>
-									<div class="mt-10 info"></div>
-								</form>
-							</div>
+							<ul style=" padding: 0;">
+								<li><a style="color: #fff;" href="#">Home</a></li>
+								<li><a style="color: #fff;" href="#">Sobre</a></li>
+								<li><a style="color: #fff;" href="#">Agendar</a></li>
+								<li><a style="color: #fff;" href="#">Contato</a></li>
+							</ul>
 						</aside>
 					</div>
-					<div class="col-lg-2 col-sm-6">
+		
+					<!-- Redes Sociais -->
+					<div class="col-lg-4 col-sm-6">
 						<aside class="f_widget social_widget">
 							<div class="f_title">
-								<h3>Follow Me</h3>
+								<h3>Redes Sociais</h3>
 							</div>
-							<p>Let us be social</p>
-							<ul class="list">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+							<p style="color: #fff; font-size: smaller;">Siga-me nas Redes Sociais!</p>
+							<ul class="list" style="list-style-type: none; padding: 0; display: flex; gap: 10px;">
+								<li><a style="font-size: larger;" href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a style="font-size: larger;" href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a style="font-size: larger;" href="#"><i class="fab fa-linkedin-in"></i></a></li>
 							</ul>
 						</aside>
 					</div>
 				</div>
 			</div>
 		</footer>
-		
-        <!--================End Footer Area =================-->
+		<footer>
+			<p style="text-align: center; background-color: #1b1b1b; color: #fff; margin: 0; padding: 10px 0;">
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+				Desenvolvido pela <a href="https://colorlib.com" target="_blank" style="color: #fff;">CloudLife</a>
+			</p>
+		</footer>    
+
+
         
-        
-        
-        
-        
-        
+         <script>
+				document.getElementById('contactForm').addEventListener('submit', function(event) {
+				event.preventDefault(); // Previne o comportamento padrão do formulário
+
+				// Captura os valores dos inputs
+				const name = document.getElementById('name').value;
+				const email = document.getElementById('email').value;
+				const subject = document.getElementById('subject').value;
+				const message = document.getElementById('message').value;
+
+				// Número de telefone do WhatsApp (inclua o código do país e o número)
+				const phoneNumber = '81989376677';
+
+				// Monta a mensagem
+				const whatsappMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+
+				// Monta a URL do WhatsApp
+				const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+				// Redireciona o usuário para a URL do WhatsApp
+				window.location.href = whatsappUrl;
+        });
+    </script>
         <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.min.js"></script>
