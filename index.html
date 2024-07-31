@@ -559,7 +559,7 @@
 				const message = document.getElementById('message').value;
 
 				// Número de telefone do WhatsApp (inclua o código do país e o número)
-				const phoneNumber = '81989376677';
+				const phoneNumber = '5581989376677';
 
 				// Monta a mensagem
 				const whatsappMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
@@ -567,8 +567,8 @@
 				// Monta a URL do WhatsApp
 				const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
 
-				// Redireciona o usuário para a URL do WhatsApp
-				window.location.href = whatsappUrl;
+				// Abre a URL do WhatsApp em uma nova guia
+				window.open(whatsappUrl, '_blank');
         });
     </script>
         <!-- Optional JavaScript -->
